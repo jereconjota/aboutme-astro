@@ -1,1 +1,1 @@
-Something about me [jereconjota](https://jereconjota.com) (with astro).
+Something about me [jereconjota](https://aboutme-astro.vercel.app) (with astro).

@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/image": "^0.16.9",
     "@astrojs/react": "^2.2.0",
+    "@astrojs/vercel": "^3.4.0",
     "@fontsource/share-tech-mono": "^5.0.1",
     "@types/react": "^18.2.7",
     "@types/react-dom": "^18.2.4",
