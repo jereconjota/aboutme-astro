@@ -1,0 +1,32 @@
+---
+import { Image } from '@astrojs/image/components';
+import michino from '../assets/profile.jpg';
+
+const { data } = Astro.props;
+
+---
+
+<div style= "text-align: center; margin-bottom: .5rem ">
+    <div>
+        <Image
+            src={michino}
+            alt={data.username}
+            width={120}
+            height={120}
+            style="border-radius: 4%; margin: 1rem"
+        />
+    </div>
+    <h1 style="text-align: center; padding: .2rem;" >{data.name}</h1>
+    <h2 style="padding: .2rem" class="text-gradient">@{data.username}</h2>
+</div>
+
+
+<style>
+    .text-gradient {
+        background-image: var(--accent-gradient);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-size: 400%;
+        background-position: 0%;
+    }
+</style>

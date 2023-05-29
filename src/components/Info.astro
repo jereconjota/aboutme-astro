@@ -1,0 +1,53 @@
+---
+import LinkList from './LinkList.astro';
+const { es, en } = Astro.props;
+---
+
+<section class="info">
+    <p id="en" >{en.text}</p>
+    <p id="es" style="display: none;">{es.text}</p>
+    <div class="lang">
+        <button id="btnEn" class="select">en</button> / <button id="btnEs">es</button>
+    </div>
+    <LinkList />
+</section>
+
+
+<script>
+    const btnEn = document.getElementById('btnEn');
+    const btnEs = document.getElementById('btnEs');
+    const en = document.getElementById('en');
+    const es = document.getElementById('es');
+
+    btnEn.addEventListener('click', () => {
+        en.style.display = 'block';
+        es.style.display = 'none';
+        btnEn.classList.add('select');
+        btnEs.classList.remove('select');
+    });
+
+    btnEs.addEventListener('click', () => {
+        en.style.display = 'none';
+        es.style.display = 'block';
+        btnEs.classList.add('select');
+        btnEn.classList.remove('select');
+    });
+</script>
+
+
+<style>
+    .select {
+        text-decoration: underline;
+    }
+
+    button {
+        all: unset;
+        cursor: pointer;
+    }
+
+    .lang {
+        text-align: center;
+        font-size: 1rem;
+        margin: 1.4rem auto;
+    }
+</style>
