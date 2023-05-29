@@ -11,23 +11,10 @@ const data = await res.json();
 ---
 
 <Layout title="About me">
-    <main>
-        <Hero data={data} />
-        <Info es={data.paragraph.find(p => p.lang === 'es')} en={data.paragraph.find(p => p.lang === 'en')} />
-        <Cat />
-    </main>
+    <Hero data={data} />
+    <Info
+        es={data.paragraph.find((p) => p.lang === 'es')}
+        en={data.paragraph.find((p) => p.lang === 'en')}
+    />
+    <Cat />
 </Layout>
-
-<style>
-    main {
-        align-items: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-start;
-        max-width: 36rem;
-        margin: 0 auto;
-        padding: 2rem 1.2rem;
-        height: 100svh;
-    }
-
-</style>
